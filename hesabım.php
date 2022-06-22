@@ -4,7 +4,7 @@ session_start();
 //eğer username adlı oturum değişkeni yok ise
 //login sayfasına yönlendir
 if ( !isset($_SESSION['ad']) ) {
-header("Location: index.php");
+header("Location: _register.php");
 exit();
 }
 include("_mysqlbaglan.php");
@@ -14,7 +14,7 @@ $telno;
 $eposta;
 $sifre=$_SESSION['sifre'];
 $tabloadı=$ad."_".$sifre;
-//$tabloadı= mb_strtolower($tabloadı);
+$tabloadı= mb_strtolower($tabloadı);
 $a="SELECT * FROM $tabloadı";
 $sorgu = mysqli_query($baglanti,$a);
 while( $sonuc=mysqli_fetch_array($sorgu,MYSQLI_ASSOC) ){
@@ -25,7 +25,8 @@ while( $sonuc=mysqli_fetch_array($sorgu,MYSQLI_ASSOC) ){
 	//$bağıştürü=$sonuc["bağıştürü"];
 	//$gidecek_yer=$sonuc["gidecek_yer"];
 }
-$sorgu="SELECT * FROM kurban WHERE adi='$ad' and telno='$telno' and  eposta='$eposta'";
+$f=mb_strtolower($ad);
+$sorgu="SELECT * FROM kurban WHERE adi='$f' and telno='$telno' and soyadi='$soyad' and eposta='$eposta'";
 $sorgu2 = mysqli_query($baglanti, $sorgu);
 $sorgu3 = mysqli_query($baglanti, $sorgu);
 ?>
@@ -302,8 +303,8 @@ while( $sonuc2=mysqli_fetch_array($sorgu2,MYSQLI_ASSOC) ){
 echo "<tr>";
 //"<input type='text' name='sifre' style='width:100%; height:100% ; font-size:20px'  value='".$sonuc["bağıştürü"]."'>" . "</td>";
 //echo "<td style='border-bottom: 1px solid #ddd;' align='center'><p>".$sonuc2["id"]."</p></td>";
-echo "<td style='border-bottom: 1px solid #ddd;' align='center'>"."<p>" /*type='text' name='bağışfiyatı' style='width:100%; height:100% ; font-size:20px'  value='"*/.$sonuc2["bagisfiyati"]."</p></td>";
-echo "<td style='border-bottom: 1px solid #ddd;' align='center'>"."<p>" /*type='text' name='bağıştürü' style='width:100%; height:100% ; font-size:20px'  value='"*/.$sonuc2["bagisturu"]."</p>" . "</td>";
+echo "<td style='border-bottom: 1px solid #ddd;' align='center'>"."<p>" /*type='text' name='bağışfiyatı' style='width:100%; height:100% ; font-size:20px'  value='"*/.$sonuc2["bağışfiyatı"]."</p></td>";
+echo "<td style='border-bottom: 1px solid #ddd;' align='center'>"."<p>" /*type='text' name='bağıştürü' style='width:100%; height:100% ; font-size:20px'  value='"*/.$sonuc2["bağıştürü"]."</p>" . "</td>";
 echo "<td style='border-bottom: 1px solid #ddd;' align='center'w>"."<p>" /*type='text' name='gidecek_yer' style='width:100%; height:100% ; font-size:20px'  value='"*/.$sonuc2["gidecek_yer"]."</p>" . "</td>";
 //echo "<td style='border-bottom: 1px solid #ddd;' align='center'>"."<p> class='button4' formaction='hesapsil.php' type='submit' value='BAĞIŞI SİL'>"."</td>";
 //echo "<td style='border-bottom: 1px solid #ddd;' align='center'>"."<p> class='button3' type='submit' value='BAĞIŞI DEĞİŞTİR'>"."</td>";

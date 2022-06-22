@@ -11,6 +11,6 @@ telno text,
 sifre text,
 eposta text
 )";
-header("Location: index.php");
+header("Location: _register.php");
 }
 ?>

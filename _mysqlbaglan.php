@@ -1,10 +1,8 @@
-
-<!DOCTYPE html>
 <?php
-$server='sql210.epizy.com';
-$user='epiz_32008610';
-$password='VJBRg2bjZuI';
-$database='epiz_32008610_yakup';
+$server='localhost';
+$user='root';
+$password='';
+$database='kullanıcılar';
 $baglanti=mysqli_connect($server,$user,$password,$database);
 
 if(!$baglanti){

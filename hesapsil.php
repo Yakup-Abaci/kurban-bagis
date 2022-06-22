@@ -19,7 +19,7 @@ else
 {
 session_start();
 session_destroy();
-header('Location: index.php');
+header('Location: _register.php');
 }
 echo "</html>";
 //veritabani baglantisini kapatiyoruz.

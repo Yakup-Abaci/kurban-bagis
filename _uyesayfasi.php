@@ -1,11 +1,10 @@
-<!DOCTYPE html>
 <?php
 //oturumu başlat
 session_start();
 //eğer username adlı oturum değişkeni yok ise
 //login sayfasına yönlendir
 if ( !isset($_SESSION['ad']) ) {
-header("Location: index.php");
+header("Location: _register.php");
 exit();
 }
 ?>
@@ -108,7 +107,7 @@ margin-top:60px;
 
 <div class="üstkısım">
 
-<nav class="navbar navbar-default" style="height:70px;width:100%">
+<nav class="navbar navbar-default" style="height:70px">
 <div class="container-fluid">
 <ul class="nav navbar-nav" >
 <li class="active"><a href="_uyesayfasi.php">Ana Sayfa</a></li>
@@ -116,9 +115,10 @@ margin-top:60px;
 <li><a href="hakkımızda.php">Hakkımızda</a></li>
 <li><a href="bağış.php">Bağış Yap</a></li>
 <li><a href="hesabım.php">Hesabım</a></li>
-<li><a style="margin-left:400px;">Detaylı bilgi için:<font color="blue"><br/>0555 555 55 55</font></a><li>
-<li><a style="margin-left:10px;">E-posta:<font color="blue"><br/>abaciyakup001@gmail.com</font></a><li>
-<li><a href='_logout.php' style="margin-left:10px;"><button type="button" class="btn btn-default">Oturumu Kapat</button></a></li>
+<li><a>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</a><li>
+<li><a>Detaylı bilgi için:<font color="blue"><br/>0555 555 55 55</font></a><li>
+<li><a>E-posta:<font color="blue"><br/>abaciyakup001@gmail.com</font></a><li>
+<li><a href='_logout.php' ><button type="button" class="btn btn-default">Oturumu Kapat</button></a></li>
 </ul>
 </div>
 </nav>
