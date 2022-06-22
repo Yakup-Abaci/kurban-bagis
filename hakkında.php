@@ -4,7 +4,7 @@ session_start();
 //eğer username adlı oturum değişkeni yok ise
 //login sayfasına yönlendir
 if ( !isset($_SESSION['ad']) ) {
-header("Location: _register.php");
+header("Location: index.php");
 exit();
 }
 ?>

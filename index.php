@@ -36,8 +36,7 @@ $mesaj = "<h1>Kullanıcı oluşturulamadı!</h1>";
 ?>
 
 <html>
-<meta http-equiv="Content-Type" content="text/html;
-charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 <meta name="viewport" content="width=device-width , initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -102,8 +101,7 @@ body {
 
 
 <!-- türkçe karakter desteği ayarı -->
-<meta http-equiv="Content-Type" content="text/html;
-charset=UTF-8" />
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
 <body>
 <div id="tamamı">
 
@@ -112,8 +110,9 @@ charset=UTF-8" />
 <nav class="navbar bg-success;" style="height:70px ;" >
 <div class="container-fluid">
 <ul class="nav navbar-nav" >
-<li class="active"><h3><font color="white"><b>KURBAN BAĞIŞ VE BİLGİ EKRANI</b></font></h3></li>
-<li><p style="margin-top:20px"><font size="3" face="block" color="white">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Hesabınız var ise hemen giriş yapın.<br /></font></p></li>
+<li><h3><font color="white"><b>KURBAN BAĞIŞ VE BİLGİ EKRANI&emsp;&emsp;&emsp;&emsp;</b></font></h3></li>
+<li><a href="https://github.com/Yakup-Abaci/kurban-bagis"><font color="white"><b>GİTHUB</b></font></a></li>
+<li><p style="margin-top:20px"><font size="3" face="block" color="white">&emsp;&emsp;&emsp;&emsp;Hesabınız var ise hemen giriş yapın.<br /></font></p></li>
 <form action="_login.php" method="POST">
 <li><font size="2" face="block" color="white">&emsp;Adınızı giriniz:</font><span style="color:red;">*</span>:<br />
 &emsp;<input type="text" id="ad" name="ad"></li>
@@ -128,7 +127,7 @@ charset=UTF-8" />
 </div>
 <div class="altkısım" style="background-color:#dbd2d5;">
 <div class="yazılar">
-<img src="kurban10.jpg"  width="1000" height="600" alt="Kurban" align="right"/>
+<img src="kurban10.png"  width="1000" height="600" alt="Kurban" align="right"/>
 </div>
 <div class="kayıtalma">
 <div class="kayıt">

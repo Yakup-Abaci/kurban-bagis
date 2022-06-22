@@ -4,7 +4,7 @@ session_start();
 //eğer username adlı oturum değişkeni yok ise
 //login sayfasına yönlendir
 if ( !isset($_SESSION['ad']) ) {
-header("Location: _register.php");
+header("Location: index.php");
 exit();
 }
 ?>
@@ -170,7 +170,7 @@ onlar vasıtası ile de verebilirsiniz.
 <tr>
 <td><font size="5" face="block" ><p class="text-warning">Fiyatlardan birini seçiniz*:</p></font></td>
 <td>
-<select name="bağışfiyatı" class="form-select" aria-label="Default select example">
+<select name="bagisfiyati" class="form-select" aria-label="Default select example">
   <option value="1000-2000">1000-2000</option>
 	<option value="2000-3000">2000-3000</option>
 	<option value="3000-4000">3000-4000</option>
@@ -201,9 +201,9 @@ onlar vasıtası ile de verebilirsiniz.
 <tr>
 <td><font size="5" face="block" >Yapmak istediğiniz bağış türünü seçiniz</font><span style="color:red;">*</span>:</td>
 <td>
-<select name="bağıştürü" class="form-select" aria-label="Default select example">
-	<option value="yurtiçi">Yurt içi</option>
-	<option value="yurtdışı">Yurt dışı</option>
+<select name="bagistürü" class="form-select" aria-label="Default select example">
+	<option value="yurtici">Yurt içi</option>
+	<option value="yurtdisi">Yurt dışı</option>
 	<option value="adak">Adak</option>
 	<option value="Akika">Akika</option>
 </select>

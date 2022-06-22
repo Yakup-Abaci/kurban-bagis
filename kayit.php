@@ -1,10 +1,15 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+</head>
+</html>
 <?php
 //oturumu başlat
 session_start();
 //eğer username adlı oturum değişkeni yok ise
 //login sayfasına yönlendir
 if ( !isset($_SESSION['ad']) ) {
-header("Location: _register.php");
+header("Location: index.php");
 exit();
 }
 else{
@@ -22,7 +27,7 @@ $telno;
 $eposta;
 $sifre=$_SESSION['sifre'];
 $tabloadı=$ad."_".$sifre;
-$tabloadı= mb_strtolower($tabloadı);
+//$tabloadı= mb_strtolower($tabloadı);
 $a="SELECT * FROM $tabloadı";
 $sorgu = mysqli_query($baglanti,$a);
 while( $sonuc=mysqli_fetch_array($sorgu,MYSQLI_ASSOC) ){
@@ -35,8 +40,8 @@ while( $sonuc=mysqli_fetch_array($sorgu,MYSQLI_ASSOC) ){
 //$eposta=$cikti["eposta"];
 //$telno=$cikti["telno"];
 $sql = "INSERT INTO kurban ".
-"(adi,soyadi,telno,eposta,bağışfiyatı,bağıştürü,gidecek_yer) ".
-"VALUES ( '$ad','$soyad','$telno','$eposta','$bağışfiyatı' , '$bağıştürü' , '$kurbanyeri')";
+"(adi,soyadi,telno,eposta,bagisfiyati,bagisturu,gidecek_yer) ".
+"VALUES ( '$ad','$soyad','$telno','$eposta','$bagisfiyati' , '$bagistürü' , '$kurbanyeri')";
 //sorguyu veritabanina gönderiyoruz. 
 $cevap = mysqli_query( $baglanti,$sql);
 //eger cevap FALSE ise hata yazdiriyoruz.
